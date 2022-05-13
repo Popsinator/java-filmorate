@@ -25,7 +25,7 @@ public class UserController {
         return users.values();
     }
 
-    @PostMapping("/users/add")//Добавление нового пользователя
+    @PostMapping("/users")//Добавление нового пользователя
     public User create(@RequestBody User user) {
             if (users.containsKey(user.getId())) {
                 throw new ValidationExceptionExistId("При добавлении нового user указан уже существующий user.id "
@@ -36,7 +36,7 @@ public class UserController {
             return user;
         }
 
-        @PutMapping("/users/update")//Обновление пользователя
+        @PutMapping("/users")//Обновление пользователя
         public User put(@RequestBody User user) throws ValidationException {
             if (!(checkValidationUser(user))) {//Проверяю добавляемый объект - user на соответствие условиям ТЗ
                 throw new ValidationException("При создании пользователя произошла ошибка.");

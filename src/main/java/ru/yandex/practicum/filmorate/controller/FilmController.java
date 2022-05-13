@@ -28,7 +28,7 @@ public class FilmController {
         return films.values();
     }
 
-    @PostMapping("/films/add")//Добавление нового фильма
+    @PostMapping("/films")//Добавление нового фильма
     public Film create(@RequestBody Film film) {
         if (films.containsKey(film.getId())) {
             throw new ValidationExceptionExistId("При добавлении нового film указан уже существующий film.id "
@@ -39,7 +39,7 @@ public class FilmController {
         return film;
     }
 
-    @PutMapping("/films/update")//Обновление существующего фильма
+    @PutMapping("/films")//Обновление существующего фильма
     public Film put(@RequestBody Film film) {
         if (!(checkValidationFilm(film))) {//Проверяю добавляемый объект - user на соответствие условиям ТЗ
             throw new ValidationException("При создании фильма произошла ошибка.");
