@@ -48,7 +48,7 @@ public class FilmController {
     }
 
     //Проверка условиям ТЗ
-    private boolean checkValidationFilm(@RequestBody Film film) {
+    private boolean checkValidationFilm(Film film) {
         if ((film.getName() != null && !(film.getName().isBlank())) //1. Название не может быть пустым;
                 && film.getDescription().length() < 201 //2. Максимальная длина описания — 200 символов
                 && !(film.getDescription().isBlank()) //Проверяю, что описание не пустое, для теста на Гите

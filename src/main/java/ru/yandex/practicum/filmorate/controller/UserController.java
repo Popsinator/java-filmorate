@@ -44,7 +44,7 @@ public class UserController {
     }
 
     //Проверка условиям ТЗ
-    public boolean checkValidationUser(@RequestBody User user) {
+    private boolean checkValidationUser(User user) {
         //Электронная почта не может быть пустой и должна содержать символ @
         if (user.getEmail() != null && !(user.getEmail().isBlank()) && user.getEmail().contains("@")
                 //Логин не может быть пустым и содержать пробелы
