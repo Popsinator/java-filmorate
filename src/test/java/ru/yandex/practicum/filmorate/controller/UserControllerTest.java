@@ -27,7 +27,7 @@ class UserControllerTest {
 
     @Test
     void findAll() {
-        assertEquals(test.findAll(), test.getUsers().values());
+        assertEquals(test.findAll(), test.getUserStorage().getUsers().values());
     }
 
     @Test
@@ -97,10 +97,10 @@ class UserControllerTest {
         userTest2.setLogin("Popsinators");
         userTest2.setBirthday(LocalDate.of(1993, 6, 4));
         test.put(userTest2);
-        assertEquals(userTest2.getEmail(), test.getUsers().get(userTest2.getId()).getEmail());
-        assertEquals(userTest2.getName(), test.getUsers().get(userTest2.getId()).getName());
-        assertEquals(userTest2.getLogin(), test.getUsers().get(userTest2.getId()).getLogin());
-        assertEquals(userTest2.getBirthday(), test.getUsers().get(userTest2.getId()).getBirthday());
+        assertEquals(userTest2.getEmail(), test.getUserStorage().getUsers().get(userTest2.getId()).getEmail());
+        assertEquals(userTest2.getName(), test.getUserStorage().getUsers().get(userTest2.getId()).getName());
+        assertEquals(userTest2.getLogin(), test.getUserStorage().getUsers().get(userTest2.getId()).getLogin());
+        assertEquals(userTest2.getBirthday(), test.getUserStorage().getUsers().get(userTest2.getId()).getBirthday());
     }
 
     @Test

@@ -8,6 +8,7 @@ public class InvalidNameFilmException extends RuntimeException {
     String parameter;
 
     public InvalidNameFilmException(String s) {
+        super(s);
         this.parameter = s;
     }
 }

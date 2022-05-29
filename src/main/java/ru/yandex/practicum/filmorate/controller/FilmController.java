@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 public class FilmController {
 
-    InMemoryFilmStorage storageFilm = new InMemoryFilmStorage(new FilmService());
+    private InMemoryFilmStorage storageFilm = new InMemoryFilmStorage(new FilmService());
 
     @GetMapping("/films")//Получение всех фильмов
     public Collection<Film> findAll() {

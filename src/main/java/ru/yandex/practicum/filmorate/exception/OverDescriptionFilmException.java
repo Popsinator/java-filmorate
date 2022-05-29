@@ -7,6 +7,7 @@ public class OverDescriptionFilmException extends RuntimeException {
 
     String parameter;
     public OverDescriptionFilmException(String s) {
+        super(s);
         this.parameter = s;
     }
 }

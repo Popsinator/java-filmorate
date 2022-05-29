@@ -24,7 +24,7 @@ public class InMemoryUserStorage implements UserStorage {
 
     private final static LocalDate limitData = LocalDate.of(1895, 12, 28);
 
-    UserService userService;
+    private UserService userService;
 
     @Autowired
     public InMemoryUserStorage(UserService userService) {

@@ -25,7 +25,7 @@ public class InMemoryFilmStorage implements FilmStorage {
 
     private final static LocalDate limitData = LocalDate.of(1895, 12, 28);
 
-    FilmService filmService;
+    private FilmService filmService;
 
     @Autowired
     public InMemoryFilmStorage(FilmService filmService) {

@@ -7,6 +7,7 @@ public class InvalidReleaseDateException extends RuntimeException {
 
     String parameter;
     public InvalidReleaseDateException(String s) {
+        super(s);
         this.parameter = s;
     }
 }
