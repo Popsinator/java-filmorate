@@ -7,6 +7,7 @@ public class InvalidLoginUserException extends RuntimeException {
 
     String parameter;
     public InvalidLoginUserException(String s) {
+        super(s);
         this.parameter = s;
     }
 }
